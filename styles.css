@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kugile', serif;
+    background-color: #f0f0f0;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Header with background image */
+header {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5vh 0 3vh 0;
+    overflow: hidden;
+}
+
+.backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/Background.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.logoWhite {
+    width: 150px;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.appointmentButton {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    width: 60vw;
+    max-width: 300px;
+    position: absolute;
+    top: 25vh;
+    z-index: 2;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.appointmentButton:hover {
+    background-color: white;
+    color: #550000;
+}
+
+/* Main content */
+main {
+    padding: 5vh 5vw;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.textWithLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(24px, 7vw, 30px);
+    text-align: center;
+    color: #550000;
+    margin-bottom: 2vh;
+    gap: 15px;
+}
+
+.logoRed {
+    margin-bottom: 20px;
+    width: 25vw;
+    max-width: 100px;
+    height: auto;
+}
+
+.streepLogo {
+    display: block;
+    width: 80vw;
+    max-width: 400px;
+    height: auto;
+    margin: 3vh auto;
+    margin-bottom: 40px;
+}
+
+.regularText {
+    color: #550000;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+    margin-top: 3vh;
+}
+
+.regularText p {
+    margin-bottom: 2vh;
+}
+
+/* Responsive adjustments */
+@media (max-width: 375px) {
+    .logoWhite {
+        width: 120px;
+    }
+
+    .appointmentButton {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+
+    .textWithLogo {
+        font-size: 24px;
+    }
+
+    .regularText {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 500px) {
+    header {
+        height: 60vh;
+    }
+
+    main {
+        padding: 8vh 5vw;
+    }
+}
